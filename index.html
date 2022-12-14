@@ -3,10 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Title</title>
-    <script src="main.js" defer></script>
+    
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p>Hello.</p>
+    <div class="register">
+         <label>やるべき事を登録してください
+             <input type="text" id="todo">
+         </label>
+         <input type="button" value="登録" id="register-todo">
+    </div>
+
+    <p>やるべき事</p>
+    <ul class="todo-list">
+        
+    </ul>
+
+    <p>やった事</p>
+    <ul class="did-list">
+
+    </ul>
+    <!-- EsModuleを使う際には、typeを設定 -->
+    <script src="main.js"></script>
   </body>
 </html>
