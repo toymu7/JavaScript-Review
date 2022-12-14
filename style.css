@@ -1,0 +1,11 @@
+.todo-list{
+  width: 400px;
+  height:300px;
+  background-color: aquamarine;
+}
+
+.did-list{
+  width:400px;
+  height:300px;
+  background-color: chocolate;
+}

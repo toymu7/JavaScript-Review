@@ -1,4 +1,3 @@
 # JavaScript-Review
-JavaScriptの復習です
+To-doアプリチャレンジです
 
-練習です。
