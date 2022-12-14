@@ -1,23 +1,39 @@
-function fn(number){
-  return number * 2;
-}
+const todo_list = document.querySelector(".todo-list");
+const did_list = document.querySelector(".did-list");
 
-const fn2 = (number) => {
-  return number * 2;
-}
+const register_todo = document.getElementById("register-todo");
 
-console.log(fn(2));
+console.log(register_todo);
+console.log(did_list);
 
-const fnArrow = (number) => {
-  return number * 2;
-}
+let a = 0;
 
-const fnArrow2 = number => number * 2;
+register_todo.addEventListener("click", () => {
+    // テキストエリアの値を取得
+    // 空ならリターン
+    const todo = document.getElementById("todo").value;
+    if(todo == "") return;
 
-console.log(fnArrow(2));
-console.log(fnArrow2(2));
+    // 空じゃなければそれを登録する
+    const li = document.createElement("li");
 
-// オブジェクトを返すときは()に入れる
-const fnArrowObj = number => ({result:number * 2})
+    // 削除機能を追加する
+    a += 1;
 
-console.log(fnArrowObj(3));
+    const delete_button = document.createElement("div");
+    delete_button.textContent = `"削除します" + ${a}`;
+
+    console.log(li);
+
+    delete_button.addEventListener("click", () => {
+        todo_list.removeChild(li);
+    });
+
+    li.textContent = todo;
+
+    li.append(delete_button);
+    todo_list.append(li);
+
+
+});
+
